@@ -1,0 +1,373 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@400;500&display=swap');
+
+body{
+	background: #4B3482;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	color: #fff;
+	line-height: 23px;
+	box-sizing: border-box;
+}
+h1{
+	font-style: normal;
+font-weight: 500;
+font-size: 3em;
+line-height: 57px;
+}
+h2{
+	font-family: 'Pacifico', cursive;
+	color: #EBD215;
+	font-size: 3em;
+	text-align: center;
+	line-height: 84px;
+
+}
+h3{
+font-weight: 400;
+font-size: 1.875em;
+line-height: 34px;
+text-align: center;
+padding-top: 20px;
+
+}
+p{
+	font-size: 1.25em;
+}
+img{
+	max-width: 100%;
+}
+
+.wrapper{
+		max-width: 1240px;
+		margin: 0 auto;
+}
+.p-100{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.button a{
+	color: black;
+	padding: 19px 30px;
+	background: #EBD215;
+	border-radius: 5px;
+	width: 100%;
+	font-weight: 500;
+}
+.center{
+	justify-content: center;
+}
+
+/*-------------------header------------------------------------------------*/
+header{
+	padding-top: 10px;
+}
+.alt_bg{
+	background-color: #8A267C;	
+}
+.banner{
+	margin-top: 60px; 
+}
+.banner__text{
+	margin-right: -50px !important;
+}
+.banner__text ul{
+	margin: 36px 0 80px;
+	font-size: 1.25em;
+}
+.banner__text ul li{
+	margin-bottom: 22px; 
+}
+
+/*---------------меню--------------------------------------*/
+.menu{
+	display: flex;
+flex-flow: row nowrap;
+justify-content: flex-end;
+align-items: center;
+font-size: 1.125em;
+}
+
+.menu li{
+	list-style: none;
+		padding-right: 51px; 
+}
+.menu__item:hover{
+	font-weight: 600;
+}
+/*----------mobile-------------------*/
+	#menu__toggle {
+  opacity: 0;
+}
+@media screen and (max-width: 780px) {
+			#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #fff;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+}
+/*------------------*/
+
+/*-----------о компании----------------------*/
+.company__text{
+	margin-top: 60px;
+}
+.company img{
+	margin-top: 20px;
+}
+.text_space{
+	margin-top: 15px;
+}
+/*-------------------------------------------*/
+
+/*------------специализации------------------*/
+.special{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.icon{
+		margin-top: 60px;
+}
+.icon__item{
+	display: flex;
+	
+	align-items: center;
+}
+.icon__item p{
+	text-align: center;
+	margin-top: 15px;
+}
+.icon__item img{
+	max-width: 100px;
+}
+.vertical{
+	flex-flow: column;
+}
+.horizont{
+	flex-flow: row;
+	align-items: center;
+}
+.horizont p{
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 0px;
+}
+
+/*------------------------------------------*/
+
+/*-------------------Эко-система-----------*/
+.company__text li{
+	font-size: 1.25em;
+}
+.ok_color{
+	color: #8A267C;
+}
+.up{
+	margin-top: -70px;
+}
+/*------------------------------------------*/
+
+/*--------стоимость--------------*/
+	.card{
+		display: flex;
+		flex-flow:column;
+		align-items: center;
+		margin-top: 10px; 
+		height: 400px;
+		justify-content: space-between;
+	}
+	.card p{
+		font-weight: bold;
+		line-height: 23px;
+		margin-top: 30px;
+	}
+	.price{
+		margin-top: 20px;
+		font-family: Pacifico;
+		line-height: 35px;
+		font-size: 1.25em;
+	}
+	.card__img{
+		position: relative;
+		margin-top: 25px; 
+	}
+	.order a{
+		padding-left: 85px;
+		padding-right: 85px;
+	}
+	.plus{
+		position: absolute;
+		top: 0;
+	}
+		.plus_2{
+		position: absolute;
+		top: 0;
+		left: 36px;
+	}
+	/*-------------------------------*/
+
+	/*-------футер------------------*/
+	.menu_footer{
+			display: flex;
+flex-flow: row nowrap;
+justify-content: flex-end;
+align-items: center;
+font-size: 1.125em;
+margin: 30px 0;
+	}
+	.menu_footer li{
+	list-style: none;
+		padding-right: 51px; 
+}
+/*----------------сетка--------------------*/
+@media all and (max-width: 500px){
+	.no-mobile {display: none;}
+}
+
+@media all and (min-width: 680px) {
+
+}
+
+[class*="col-"] {
+  margin-bottom: 20px;
+  min-height: 30px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}  [class*="col-"] {
+    margin-right: 0;
+    width: 100%;
+  }
+
+[class*="col-"]:last-child {
+  margin-right: 0;
+}
+
+@media all and ( min-width: 780px ) {  
+   [class*="col-"] {
+   margin-right: 20px;
+  }
+  .col-1 {flex: 1;}
+  .col-2 {flex: 2;}
+  .col-3 {flex: 3;}
+  .col-4 {flex: 4;}
+  .col-5 {flex: 5;}
+  .col-6 {flex: 6;}
+  .col-7 {flex: 7;}
+  .col-8 {flex: 8;}
+  .col-9 {flex: 9;}
+  .col-10 {flex: 10;}
+  .col-11 {flex: 11;}
+  .col-12 {flex: 12;}
+}
+
+.full-width { margin-bottom: 0; }
+
+.full-width:last-child { margin-bottom: 20px; }
+
+.space-off,
+.space-off:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 500px) {
+	.full-width {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .space-off,
+  .space-off:last-child {
+    margin-bottom: 0;
+  }
+}
+/*--------------------------------*/
